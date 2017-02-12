@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var a = [];
+	for(var i = 0; i < 10; i++) { //10
+	// for(let i = 0; i < 10; i++) { //6
+		a[i] = function() {
+			console.log(i);
+		}
+	}
+	// a[6]();
+
+	for(let i = 0; i < 3; i++) {
+		let i = 'ooo';
+		console.log(i);//输出3次'ooo',var不行
+	}
+//let 不存在变量提升
+//let 不允许重复声明
+//const声明一个只读的常量，一旦声明，敞亮的值就不可改变
+//const声明的变量不得改变值，这意味着，const一旦声明变量，就必须立即初始化，不能留到以后赋值。
+//const和let一样。不存在变量提升，不允许重复声明，块级作用域
+	</script>
+</body>
+</html>
