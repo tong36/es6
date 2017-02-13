@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//1.字符串的unicode表示法
+	//2.codePointAt()
+	//3.string.fromCodePoint()
+	//4.字符串的遍历接口
+		//除了遍历字符串，这个遍历器最大的优点是可以识别大于0xFFFF的码点，传统的for循环无法识别这样的码点。
+		for(let code of 'adc') {
+			console.log(code)
+		}
+	//5.at()
+		//ES5对字符串对象提供charAt方法，返回字符串给定位置的字符。该方法不能识别码点大于0xFFFF的字符
+	//6.normalize()
+		//ES6提供字符串实例的normalize()方法，用来将字符的不同表示方法统一为同样的形式，这称为Unicode正规化。
+	//7.includes(),startsWith(),endsWith()
+		//includes() 返回布尔值，表示是否找到参数字符串
+		//startsWith() 返回布尔值，表示在头部是否找到该参数字符串
+		//endsWith() 返回布尔值，表示在尾部是否找到该参数字符串
+		let s = 'hello world';
+		console.log(s.includes('o',2),s.startsWith('o'),s.endsWith('o'))
+		//还支持第二个参数，表示搜索的位置。endsWith()的第二个参数表示在前N个字符串中查找、
+	//8.repeat()
+		//返回一个新字符串，表示将字符串重复n遍
+		//参数小数，则会取整(不是4舍5入)，参数是负数或者Infinity,报错，参数NAN等同0，0-1之间等同0 
+	//9.panStart() padEnd()
+		// 'x'.padStart(5, 'ab') // 'ababx'
+		// 'x'.padStart(4, 'ab') // 'abax'
+
+		// 'x'.padEnd(5, 'ab') // 'xabab'
+		// 'x'.padEnd(4, 'ab') // 'xaba'
+		//常见用途 为数值补全指定位数。下面代码生成10位的数值字符串。
+		// '1'.padStart(10, '0') // "0000000001"
+		// '12'.padStart(10, '0') // "0000000012"
+		// '123456'.padStart(10, '0') // "0000123456"
+	//10.模板字符串
+		var greeting = `\`Yo\` World!`;
+		console.log(greeting);
+	//11.模板编译 
+	//12.标签模板
+	//13.String.raw()
+	//14.模板字符串的限制
+	</script>
+</body>
+</html>
